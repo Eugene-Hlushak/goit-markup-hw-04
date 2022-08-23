@@ -10,7 +10,8 @@
   --secondary-title-color: #ffffff;
 
   --bg-site-color: #f5f5f5;
-  --bg-hero-footer-color: #2f303a;
+  --bg-footer-color: #2f303a;
+  --bg-hero-color: #c4c4c4;
   --bg-team-section-color: #f5f4fa;
   --bg-team-card-color: #ffffff;
 
@@ -148,7 +149,13 @@ p {
   padding-top: 200px;
   padding-bottom: 200px;
 
-  background-color: var(--bg-hero-footer-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(/images/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: auto;
+
+  background-color: var(--bg-hero-color);
 }
 
 .hero-title {
@@ -305,7 +312,7 @@ p {
 /* ===== FOOTER ===== */
 
 .bottom {
-  background-color: var(--bg-hero-footer-color);
+  background-color: var(--bg-footer-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -379,6 +386,8 @@ p {
 .btn-filter:focus {
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .btn-filter.current {
@@ -396,7 +405,12 @@ p {
 
 .examples-list-item {
   flex-basis: calc((100% - 60px) / 3);
-  /* background-color: #ffffff; */
+  background-color: #ffffff;
+}
+
+.examples-list-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .examples .card-description {
