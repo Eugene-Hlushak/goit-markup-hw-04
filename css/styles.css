@@ -460,16 +460,6 @@ p {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.join .social-link:hover,
-.join .social-link:focus {
-  background-color: var(--accent-color);
-}
-
-.join .social-link:hover .social-icon,
-.join .social-link:focus .social-icon {
-  fill: #ffffff;
-}
-
 /* ===== hover & focus ===== */
 
 .logo:focus,
