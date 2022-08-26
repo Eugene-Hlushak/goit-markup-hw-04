@@ -8,10 +8,12 @@
   --nav-link-text-color: #212121;
   --primary-title-color: #212121;
   --secondary-title-color: #ffffff;
+  --icons-color: #afb1b8;
 
   --bg-site-color: #f5f5f5;
   --bg-footer-color: #2f303a;
   --bg-hero-color: #c4c4c4;
+  --bg-features-icon-color: #f5f4fa;
   --bg-team-section-color: #f5f4fa;
   --bg-team-card-color: #ffffff;
 
@@ -65,6 +67,19 @@ p {
   padding-left: 0;
 
   list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 /* ===== HEADER ===== */
@@ -128,6 +143,7 @@ p {
 }
 
 .top .contact-link {
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -137,9 +153,27 @@ p {
 
 .nav-link,
 .top .contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.icon-envelope {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.icon-envelope:hover,
+.icon-smartphone:hover {
+  fill: currentColor;
+}
+
+.icon-smartphone {
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 /* ===== HERO ===== */
@@ -150,7 +184,7 @@ p {
   padding-bottom: 200px;
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(/images/header-bg.jpg);
+    url('../images/header-bg.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: auto;
@@ -197,10 +231,6 @@ p {
 
 /* ===== FEATURES ===== */
 
-.features-list-icons {
-  display: flex;
-}
-
 .features-list {
   display: flex;
 }
@@ -227,6 +257,16 @@ p {
 .features-text {
   font-size: var(--features-font-size);
   line-height: 1.71;
+}
+
+.icon-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-color: var(--bg-features-icon-color);
 }
 
 /* ===== WORK ===== */
@@ -295,18 +335,73 @@ p {
   line-height: 1.19;
 }
 
+.team-text {
+  margin-bottom: 16px;
+}
+
+.social-links-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.social-link:hover {
+  background-color: var(--accent-color);
+}
+
+.social-icon {
+  fill: var(--icons-color);
+}
+.social-link:hover .social-icon {
+  fill: #ffffff;
+}
+
 /* ===== CLIENTS ===== */
 
 .clients-title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 
   color: var(--primary-title-color);
 }
 
 .clients-list {
   display: flex;
+  column-gap: 30px;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.client-link:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.client-icon {
+  fill: var(--icons-color);
+}
+
+.client-link:hover .client-icon {
+  fill: var(--accent-color);
 }
 
 /* ===== FOOTER ===== */
@@ -315,6 +410,12 @@ p {
   background-color: var(--bg-footer-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.bottom .container {
+  display: flex;
+  align-items: baseline;
+  column-gap: 70px;
 }
 
 .bottom .logo {
@@ -342,6 +443,27 @@ p {
   font-style: normal;
 
   color: var(--footer-contacts-color);
+}
+
+.join-title {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.join .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.join .social-link:hover {
+  background-color: var(--accent-color);
+}
+
+.join .social-link:hover .social-icon {
+  fill: #ffffff;
 }
 
 /* ===== hover & focus ===== */
@@ -434,17 +556,4 @@ p {
 .portfolio-text {
   font-size: var(--portfolio-text-font-size);
   line-height: 1.88;
-}
-
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
 }
